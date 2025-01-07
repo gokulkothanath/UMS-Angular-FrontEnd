@@ -1,27 +1,29 @@
-# AngularUms
+User Management System
+A User Management System built with Angular and NgRx, featuring robust state management, role-based access control, and a responsive design. This application allows for creating, updating, and managing users efficiently, demonstrating the power of Angular and NgRx for state-driven applications.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.2.
+Features
+NgRx State Management:
 
-## Development server
+Centralized state for user data and authentication.
+Actions, Reducers, and Selectors for seamless state updates.
+User Authentication:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Login/logout functionality with state persistence.
+Role-Based Access Control (RBAC):
 
-## Code scaffolding
+Restrict access to features based on user roles (Admin, User).
+CRUD Operations:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Add, edit, delete, and view users in a responsive UI.
+Responsive Design:
 
-## Build
+Mobile-first layout using Angular Material.
+Error Handling:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Comprehensive error handling and notifications.
+Tech Stack
+Frontend: Angular 16, Angular Material
+State Management: NgRx (Store, Effects, and DevTools)
+Styling: SCSS
+Backend (optional): Can integrate with any REST API
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
