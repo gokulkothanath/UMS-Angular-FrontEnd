@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Design by foolishdeveloper.com -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    <!--Stylesheet-->
+    <style media="screen"></style>
+</head>
+<body>
+    <div class="background">
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+    <form [formGroup]="signUpform" (ngSubmit)="onSubmit()">
+      <div class="mb-3">
+        <label for="username" class="form-label">UserName</label>
+        <input type="text" class="" id=""  formControlName="UserName"  placeholder="Username">
+        <label class="text-danger" *ngIf="f.UserName.errors&&flag">*Valid input required</label>
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Password</label>
+        <input type="password" placeholder="PassWord" formControlName="passWord"  class="" >
+        <label class="text-danger" *ngIf="f.passWord.errors&&flag">*Valid input required</label>
+      </div>
+      <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Place</label>
+          <input type="text" formControlName="place" placeholder="place"  class="" >
+          <label class="text-danger" *ngIf="f.place.errors&&flag">*Valid input required</label>
+        </div>
+        <div *ngIf="error$ | async"><h4>UserName Exists</h4></div>
+        <div *ngIf="signingUp$ | async" ><h4>signingUp...</h4></div>
+        <div *ngIf="message$ | async">{{ message$ | async }}</div>
+  
+        <button type="submit" class="btn btn-dark text-dark" >SignUP</button>
+    </form>
+    
+</body>
+</html>
+
+
+
+
+
+
+<!-- -------------------------- -->
+  <div *ngIf="error$ | async">{{ error$ | async }}</div>
+  <div *ngIf="signingUp$ | async" ><h4>signingUp...</h4></div>
+  <div *ngIf="message$ | async">{{ message$ | async }}</div>
